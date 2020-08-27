@@ -17,6 +17,7 @@ Be aware that you will have to change the management IP address to match your ow
 
 I have also configured name resolution in my /etc/hosts file. As such, I have no IP addresses explicitly configured in my Ansible ```inventory.yml``` file.
 Instead I have simply stated the device name - which is then resolved to its respective MGMT ip address. 
+
 See below:
 
 
