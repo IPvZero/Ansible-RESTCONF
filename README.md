@@ -28,7 +28,7 @@ Instead I have simply stated the device name - which with then be resolved to th
  
  My Ansible workstation is Ubuntu on WSL with the following installations - see ```requirements.txt```
  
-
+----------------------------------------------------------------------------------------------------------------------
 
 ### EXECUTION
 
