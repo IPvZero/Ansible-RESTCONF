@@ -2,7 +2,7 @@
 Deploying iBGP, EIGRP, SNMP, Syslog and NTP over RESTCONF via Ansible
 
 -----------------------------------------------------------------------------------
-# LAB SETUP
+### LAB SETUP
 
 To Begin this Lab, first configure construct a topology as follows:
 TOPOLOGY:
@@ -22,7 +22,15 @@ Instead I have simply stated the device name - which with then be resolved to th
 ![alt text](https://github.com/IPvZero/Ansible-RESTCONF/blob/master/images/etc.png?raw=true)
 
 ----------------------------------------------------------------------------------------------------
-# EXECUTION
+### REQUIREMENTS
+ The lab was conducted on using CSR1000v images running ```Cisco IOS XE Software, Version 16.11.01b``` from my CML-P license.
+ 
+ 
+ My Ansible workstation is Ubuntu on WSL with the following installations - see ```requirements.txt```
+ 
+
+
+### EXECUTION
 
 Once you have each device configured with their basic startup configs, you can deploy the playbook simply by typing: 
 
@@ -30,7 +38,7 @@ Once you have each device configured with their basic startup configs, you can d
 ```ansible-playbook restconf-playbook.yml```
 
 -------------------------------------------------------------------------------------------------------------------
-# OUTPUT
+### OUTPUT
 
 Your network should now be configured!
 
