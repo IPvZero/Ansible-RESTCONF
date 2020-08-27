@@ -1,0 +1,38 @@
+hostname R1
+!
+!
+vrf definition MGMT
+ !
+ address-family ipv4
+ exit-address-family
+!
+restconf
+!
+username john privilege 15 password 0 cisco
+!
+interface Loopback0
+ ip address 1.1.1.1 255.255.255.255
+!
+interface GigabitEthernet1
+ vrf forwarding MGMT
+ ip address 192.168.31.101 255.255.255.0
+ no shut
+!
+interface GigabitEthernet2
+ ip address 10.2.2.1 255.255.255.252
+ no shut
+!
+interface GigabitEthernet3
+ ip address 10.3.3.1 255.255.255.252
+ no shut
+!
+interface GigabitEthernet4
+ ip address 10.4.4.1 255.255.255.252
+ no shut
+!
+
+ip http server
+ip http authentication local
+ip http secure-server
+
+end
