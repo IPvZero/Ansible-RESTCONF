@@ -4,7 +4,8 @@ Deploying iBGP, EIGRP, SNMP, Syslog and NTP over RESTCONF via Ansible
 -----------------------------------------------------------------------------------
 ### LAB SETUP
 
-To Begin this Lab, first configure construct a topology as follows:
+**To Begin this Lab, first construct your topology to match the image below**
+
 TOPOLOGY:
 
 
