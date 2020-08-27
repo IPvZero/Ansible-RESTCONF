@@ -16,7 +16,8 @@ NOTE: For a quickstart, simple copy-paste the base configurations from the ```st
 Be aware that you will have to change the management IP address to match your own setup - in my case, I'm using the 192.168.31.0/24 network as MGMT.
 
 I have also configured name resolution in my /etc/hosts file. As such, I have no IP addresses explicitly configured in my Ansible ```inventory.yml``` file.
-Instead I have simply stated the device name - which with then be resolved to the respective MGMT ip addresses. See below:
+Instead I have simply stated the device name - which is then resolved to its respective MGMT ip address. 
+See below:
 
 
 ![alt text](https://github.com/IPvZero/Ansible-RESTCONF/blob/master/images/etc.png?raw=true)
