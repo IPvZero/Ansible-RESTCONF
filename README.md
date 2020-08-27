@@ -10,11 +10,13 @@ TOPOLOGY:
 
 ![alt text](https://github.com/IPvZero/Ansible-RESTCONF/blob/master/images/labpic.png?raw=true)
 
-<p>NOTE: For a quickstart, simple copy-paste the base configurations from the ```startupconfigs``` folder in this repo.
-Be aware that you will have to change the management IP address to match your own setup - in my case, I'm using the 192.168.31.0/24 network as MGMT.</p>
 
-<p>I have also configured name resolution in my /etc/hosts file. As such, I have no IP addresses explicitly configured in my Ansible inventory.yml file.
-Instead I have simply stated the device name - which with then be resolved to the respective MGMT ip addresses. See below:</p>
+
+NOTE: For a quickstart, simple copy-paste the base configurations from the ```startupconfigs``` folder in this repo.
+Be aware that you will have to change the management IP address to match your own setup - in my case, I'm using the 192.168.31.0/24 network as MGMT.
+
+I have also configured name resolution in my /etc/hosts file. As such, I have no IP addresses explicitly configured in my Ansible inventory.yml file.
+Instead I have simply stated the device name - which with then be resolved to the respective MGMT ip addresses. See below:
 
 
 ![alt text](https://github.com/IPvZero/Ansible-RESTCONF/blob/master/images/etc.png?raw=true)
