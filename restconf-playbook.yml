@@ -1,0 +1,78 @@
+---
+- name: "PLAY 1: RESTCONF CONFIGURATION"
+  hosts: routers
+  connection: local
+  tasks:
+
+    - name: "TASK 1: Configure SNMP via RESTCONF"
+      uri:
+        url: "{{ url }}/data/native/snmp-server"
+        user: "{{ ansible_user }}"
+        password: "{{ ansible_password }}"
+        method: PUT
+        headers:
+          Content-Type: 'application/yang-data+json'
+          Accept:
+            application/yang-data+json,
+            application/yang-data.errors+json
+        body_format: json
+        body: "{{ snmp_configure }}"
+        validate_certs: false
+        status_code:
+         - 200
+         - 204
+
+
+    - name: "TASK 2: Configure NTP via RESTCONF"
+      uri:
+        url: "{{ url }}/data/native/ntp"
+        user: "{{ ansible_user }}"
+        password: "{{ ansible_password }}"
+        method: PUT
+        headers:
+          Content-Type: 'application/yang-data+json'
+          Accept:
+            application/yang-data+json,
+            application/yang-data.errors+json
+        body_format: json
+        body: "{{ ntp_configure }}"
+        validate_certs: false
+        status_code:
+         - 200
+         - 204
+
+    - name: "TASK 3: Configure Syslog via RESTCONF"
+      uri:
+        url: "{{ url }}/data/native/logging"
+        user: "{{ ansible_user }}"
+        password: "{{ ansible_password }}"
+        method: PUT
+        headers:
+          Content-Type: 'application/yang-data+json'
+          Accept:
+            application/yang-data+json,
+            application/yang-data.errors+json
+        body_format: json
+        body: "{{ syslog_configure }}"
+        validate_certs: false
+        status_code:
+         - 200
+         - 204
+
+    - name: "TASK 4: Configure Routing via RESTCONF"
+      uri:
+        url: "{{ url }}/data/native/router"
+        user: "{{ ansible_user }}"
+        password: "{{ ansible_password }}"
+        method: PUT
+        headers:
+          Content-Type: 'application/yang-data+json'
+          Accept:
+            application/yang-data+json,
+            application/yang-data.errors+json
+        body_format: json
+        body: "{{ router_configure }}"
+        validate_certs: false
+        status_code:
+         - 200
+         - 204
