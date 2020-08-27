@@ -1,0 +1,65 @@
+router_configure:
+  router:
+    Cisco-IOS-XE-bgp:bgp:
+    - address-family:
+        no-vrf:
+          ipv4:
+          - af-name: unicast
+            ipv4-unicast:
+              neighbor:
+              - activate:
+                -
+                id: 2.2.2.2
+              - activate:
+                -
+                id: 3.3.3.3
+              - activate:
+                -
+                id: 4.4.4.4
+      bgp:
+        log-neighbor-changes: true
+        router-id:
+          ip-id: 1.2.3.4
+      id: 65001
+      neighbor:
+      - id: 2.2.2.2
+        remote-as: 65001
+        timers:
+          holdtime: 15
+          keepalive-interval: 5
+        update-source:
+          Loopback: 0
+      - id: 3.3.3.3
+        remote-as: 65001
+        timers:
+          holdtime: 15
+          keepalive-interval: 5
+        update-source:
+          Loopback: 0
+      - id: 4.4.4.4
+        remote-as: 65001
+        timers:
+          holdtime: 15
+          keepalive-interval: 5
+        update-source:
+          Loopback: 0
+    Cisco-IOS-XE-eigrp:eigrp:
+    - address-family:
+      - af-ip-list:
+        - autonomous-system: 5
+          eigrp:
+            router-id: 1.1.1.1
+          network:
+          - number: 1.1.1.1
+            wild-card: 0.0.0.0
+          - number: 10.2.2.0
+            wild-card: 0.0.0.3
+          - number: 10.3.3.0
+            wild-card: 0.0.0.3
+          - number: 10.4.4.0
+            wild-card: 0.0.0.3
+          topology:
+            base: {}
+          unicast-multicast: unicast
+        type: ipv4
+      id: IPvZero
