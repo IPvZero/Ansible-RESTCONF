@@ -23,7 +23,7 @@ Instead I have simply stated the device name - which with then be resolved to th
 
 ----------------------------------------------------------------------------------------------------
 ### REQUIREMENTS
- The lab was conducted on using CSR1000v images running ```Cisco IOS XE Software, Version 16.11.01b``` from my CML-P license.
+ The lab was conducted using CSR1000v images running ```Cisco IOS XE Software, Version 16.11.01b``` from my CML-P license.
  
  
  My Ansible workstation is Ubuntu on WSL with the following installations - see ```requirements.txt```
