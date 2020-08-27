@@ -13,7 +13,8 @@ TOPOLOGY:
 
 
 
-NOTE: For a quickstart, simple copy-paste the base configurations from the ```startupconfigs``` folder in this repo.
+**NOTE: For a quick setup - simply copy-paste the base configurations from the ```startupconfigs``` folder in this repo.**
+
 Be aware that you will have to change the management IP address to match your own setup - in my case, I'm using the 192.168.31.0/24 network as MGMT.
 
 I have also configured name resolution in my /etc/hosts file. As such, I have no IP addresses explicitly configured in my Ansible ```inventory.yml``` file.
