@@ -1,0 +1,37 @@
+---
+ansible_user: "john"
+ansible_password: "cisco"
+url: "https://{{ ansible_host }}/restconf"
+
+syslog_configure:
+  logging:
+    host:
+      ipv4-host-list:
+       - ipv4-host: 9.9.9.9
+
+snmp_configure:
+  snmp-server:
+    Cisco-IOS-XE-snmp:chassis-id: IPvZero-Group
+    Cisco-IOS-XE-snmp:community:
+    - name: IPvZero
+    Cisco-IOS-XE-snmp:contact: IPvZero@cbtnuggets.com
+    Cisco-IOS-XE-snmp:enable:
+      enable-choice:
+        traps: {}
+    Cisco-IOS-XE-snmp:host:
+    - ip-address: 8.8.8.8
+      community-or-user: John
+      version: 2c
+    - ip-address: 88.88.88.88
+      community-or-user: IPvZero
+      version: 2c
+
+ntp_configure:
+  ntp:
+    Cisco-IOS-XE-ntp:server:
+      server-list:
+      - ip-address: 4.4.4.4
+      - ip-address: 1.1.1.1
+        prefer:
+        -
+        
