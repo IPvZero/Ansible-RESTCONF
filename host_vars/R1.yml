@@ -19,7 +19,7 @@ router_configure:
       bgp:
         log-neighbor-changes: true
         router-id:
-          ip-id: 1.2.3.4
+          ip-id: 1.1.1.1
       id: 65001
       neighbor:
       - id: 2.2.2.2
